@@ -19,7 +19,7 @@ public class CommandHub {
           .getProxy()
           .getCommandManager()
           .register(
-              plugin.getProxy().getCommandManager().metaBuilder("lobby").build(),
+              "lobby",
               new BrigadierCommand(
                   LiteralArgumentBuilder.<CommandSource>literal("hub")
                       .requires(
@@ -72,7 +72,8 @@ public class CommandHub {
                                       });
                             }
                             return 1;
-                          })));
+                          })),
+              "hub");
     }
   }
 }
