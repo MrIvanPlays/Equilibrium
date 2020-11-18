@@ -1,0 +1,48 @@
+#######################
+#                     #
+#     Equilibrium     #
+#   by: MrIvanPlays   #
+#                     #
+#######################
+
+# All known hub ( lobby ) servers
+# In the order they're specified they're gonna be tried
+hubs:
+  - "lobbymain"
+  - "lobby1"
+  - "lobby2"
+
+# Whether to determine the joined hub only on player initial join
+only-initial-join: true
+
+# Whether to enable the hub command or not
+enable-hub-command: true
+
+# Hub command permission ( if you want it to be exclusive )
+# leaving it empty would mean no permission
+hub-command-permission: ""
+
+# Criteria per server
+# Example:
+# criteria:
+#    hub:  - this is the hub's name
+#      permission: "mycool.permission" - permission that is gonna be required for the player to join
+#      # all other criteria come here by their name
+# The following criteria are supported: permission , max amount of players ( max_players ) ,
+# minecraft version ( mc_ver ) .
+# Explanations:
+# - permission - requires the player joining to have that permission. if the specified hub meets the other criteria,
+#   and the player has the permission, he will be immediately sent to that hub
+# - max amount of players - pretty straightforward. the maximum amount of players that are allowed on the hub.
+# - minecraft version - the minecraft version for which the hub is specific for. if the specified hub meets the other
+#   criteria and the player is running that version, he will be immediately sent to that hub
+criteria:
+  lobbymain:
+    max_players: 300
+
+# All configurable messages
+messages:
+  reload-successful: "&aConfiguration reloaded successfully."
+  not-player: "&cWe're sorry, this is a playeronly command."
+  connected: "&aYou've been connected to %hub%"
+

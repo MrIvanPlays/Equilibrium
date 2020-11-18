@@ -1,0 +1,9 @@
+{
+  "id": "equilibrium",
+  "name": "Equilibrium",
+  "description": "Hub balancer",
+  "authors": [
+    "MrIvanPlays"
+  ],
+  "main": "com.mrivanplays.equilibrium.Equilibrium"
+}
